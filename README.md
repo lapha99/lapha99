@@ -12,5 +12,8 @@ Nos données sont des données non -supervisées constituées  de  58717 variabl
 
 2. ###  Détectio des valeurs abbérentes:
 
-![boxplot des valeur abbérrentes](
+![boxplot des valeur abbérrentes](https://github.com/lapha99/Projet-stage/blob/main/figure/boxplot_ab%C3%A9rrantes.png)
 
+On voit qu'on a beaucoup de valeurs abbérentes  ainsi on  éssaye de supprimer le maximum de valeurs abbérente,      
+Vous trouverez ci-dessous  une  visualisation de boxplot aprés suppressions des valeurs abbérentes
+![boxplot suppression](
