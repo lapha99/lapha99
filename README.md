@@ -1,16 +1,16 @@
-### Hi there 👋
+#  Données transcriptomiques  
+## Analyse Exploiratoire des données :
+*  Défintion
+*  Détectio des valeurs  abbérente
+*  Visualisation  des données
 
-<!--
-**lapha99/lapha99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+1.  ###  Définition :
 
-Here are some ideas to get you started:
+Les  * données transcriptomiques ,ou données d'expressions des gènes, sont des  données issues de technologies variées  telles que la technologie de la biopuces ou puces  à ADN.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Nos données sont des données non -supervisées constituées  de  58717 variables  et 27  observations.Les données  servent de mesure  decrivant l'etat de haute dimension de chaque expression de gènes.Notre objectif est d'extraire  ces différents  états à l'aide  de modèles de grandes  capacités capables d'identifier l'expression des gènes.
+
+2. ###  Détectio des valeurs abbérentes:
+
+![boxplot des valeur abbérrentes](
+
