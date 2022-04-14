@@ -96,7 +96,8 @@ X_tsne=tsne.fit_transform(Xnorm)
 # Model Autoencoder:
 
 Les auto encodeurs sont des reseaux de neurones qui possédent exactement le *même nombre de neurones sur leur couche d'entrée et leur couche de sortie*.
-Le but pour un auto encodeur est d'avoir une sortie la plus proche de l'entrée! L'apprentissage est donc << auto-supervisé >> car la perte (loss) à minimiser est le coût de reconstruction entre la sortie et l'entrée.Ce qui fait de ce modèle un modèle non supervisé.
+Le but pour un auto encodeur est d'avoir une sortie la plus proche de l'entrée!
+L'apprentissage est donc << auto-supervisé >> car la perte (loss) à minimiser est le coût de reconstruction entre la sortie et l'entrée.Ce qui fait de ce modèle un modèle non supervisé.
 
 ## Architecture de notre modèle:
 
