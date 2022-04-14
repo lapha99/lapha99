@@ -1,28 +1,93 @@
 #  Données transcriptomiques  
 ## Analyse Exploiratoire des données :
 *  Défintion
-*  Détectio des valeurs  abbérente
-*  Visualisation  des données
-
-1.  ###  Définition :
-
+*  Détectio des valeurs  aberrant
+*  Suppréssions et normalisation
+ # Définition : 
+  
 Les  * données transcriptomiques ,ou données d'expressions des gènes, sont des  données issues de technologies variées  telles que la technologie de la biopuces ou puces  à ADN.
 
 Nos données sont des données non -supervisées constituées  de  58717 variables  et 27  observations.Les données  servent de mesure  decrivant l'etat de haute dimension de chaque expression de gènes.Notre objectif est d'extraire  ces différents  états à l'aide  de modèles de grandes  capacités capables d'identifier l'expression des gènes.
 
-2. ###  Détectio des valeurs abbérentes:
+# Détection des valeurs aberrantes:
+
+Les valeurs aberrantes peuvent  être  detectées en utilisant la visualisation, en mettant des formules mathématiques sur l'ensemble de données ou en utilsant l'approche  statistique.
+
+## Visualisation:
+
+1.Utilisation de  la boxplot :
+
 
 ![boxplot des valeur abbérrentes](https://github.com/lapha99/Projet-stage/blob/main/figure/boxplot_ab%C3%A9rrantes.png)
 
-On voit qu'on a beaucoup de valeurs abbérentes  ainsi on  éssaye de supprimer le maximum de valeurs abbérente,      
-Vous trouverez ci-dessous  une  visualisation de boxplot aprés suppressions des valeurs abbérentes  
+
+L'approche IQR(Inter Quartile Range) pour trouver les valeurs aberrantes est l'approche la plus courrament utilisé.
+
+IQR = Quarile3 -Quartile1
+
+```Python
+#  IQR
+
+Q1 = np.percentile(data["feature"],25)
+
+Q3 = np.percentile(data["feature"],75)
+
+IQR= Q3 -Q1
+```
+Aprés avoir détecter les valeurs aberrantes à l'aide de l'IQR  on va éliminer les valeurs qui ne sont pas informatives pour l'analyse autrement dit on va supprimer les valeurs aberrantes.
+
+## Supprimer les valeurs aberrantes
+
+### Exemple de code :
+``` Python
+def drop_outliers(data,features):
+  Q1 = np.percentile(data["feature"],25)
+  Q3 = np.percentile(data["feature"],75)
+  limit=1.5*(Q3-Q1)
+  data.drop(data[data["feature"]> Q3 + limit].index,inplace=True)
+  data.drop(data[data["feature"]< limit - Q1].index,inplace=True)
+```  
+  
+  
+
+Vous trouverez ci-dessous  une  visualisation de boxplot aprés suppressions des valeurs aberrantes
 
 3.Visualiisation
 
 ![boxplot suppression ](https://github.com/lapha99/Projet-stage/blob/main/figure/box.png)
+
+Remarque:
+Aprés suppréssions des valeurs aberrantes la dimension de nos données est passée de (58717,27) à (16030,27).
+
+# Normalisation des données:
+Les données d'expression brutes sont normalisées selon la méthode CPM. Des unités d'expression normalisées sont nécessaires pour éliminer les biais techniques dans les données sequencées telles que la profondeur du sequençage et la longueure des gènes et rendre les expressions des gènesdirectement comparables au sein et entre les échantillons.La normalisation CPM (Nombcre par million de lectures mappées) ne tient pas en compte de la longueur de la transcription,convient  aux protocoles de sequençage ou les lectures sont générés quelques soit la longueur du gène.
+
+Note: Normalisation CPM est installer à l'aide du package python *bioinfokit*
 
 # Analyses des  composantes principales : 
 
 Nous  présentons un ACP sur les données transcriptomique.Un ACP  est une méthode de reduction de  dimension  qui va permettre de transformer des variables trés corrélées en nouvelles variables  décorrélées les unes des autres. Le principe est simple  il s'agit enfaite  de resumer l'information  qui est contenu dans une large base de données  en un certain nombre de variables synthétiques appelés : composantes principales.
 
 ![ACP ]( https://github.com/lapha99/Projet-stage/blob/main/figure/ACP__Suppr.png)
+
+# Méthodes TSNE:
+t-Distributed Stochastic Neighbor Embedding (t-SNE) est une technique non supervisée et non linéaire principalement utilisée pour l'exploration de données et de visualisation de données de grandes dimension.Il a été developpé par Laurens van der Maatens et Geoffrey en 2008.
+
+## Comparaison t-SNE et ACP:
+
+l'ACP a été développé en 1933 tandis que t-SNE a été développé en 2008.Beaucoup de choses ont changé dans le monde de la science des données depuis 1933.
+Deuxiément, L'ACP est une technique de réduction de dimension lineaire qui cherche à maximiser la variance la variance et à préserver de grandes distances par paires.En d'autre termes,les choses qui sont différentes finissent par être trés éloignées l'une de l'autre.Cela peut conduire à une mauvaise visualisation, en particulier lorsqu'il s'agit de variétés non linéaires. par exemple : cylindre,boule etc...t-SNE différe de ACP  en ne préservant que de petites distances par paires,tandis que l'ACP se préoccupe de préserver de grandes distances.
+Maintenant que nous savons pourquoi nous pourrions utiliser t-sne sur PCA.
+Expliquons comment fonctionne t-SNE, l'algorithme t-SNE calcule une mesure de similarité entre des paires d'instances dans l'espace de grandes dimension et dans l'espace de faible dimension.Il tente ensuite d'optimiser ces deux mesures à l'aide d'une fonction de coût.
+
+Passons à la visualisation de nos données par t-SNE  et ici pour mieux expliquer ou avoir une ressemblance de structure à notre ACP on va jouer sur la perplexity.
+
+Exemple de code:
+```Python
+from sklearn.manifold import TSNE
+tsne=TSNE(n_components=2,perplexity=25,init="pca",learningRate=100;random_state=0,n_jobs=-1)
+X_tsne=tsne.fit_transform(Xnorm)
+```
+
+## Visualisation t-SNE:
+![
