@@ -115,7 +115,7 @@ La perte d'entraînement et de validation sur 100 époques d'entraînement pour 
 En tant que modèle génératif(création de nouvelles entrées), les entités à dimension reduite peuvent être simuler pour échantilloner des données.
 Vous trouverez ci-dessous une visualisation de t-SNE des caracteristiques codées de l'encodeurs.
 
-![Visualisation t-SNE output](
+![Visualisation t-SNE output](https://github.com/lapha99/Projet-stage/blob/main/figure/tsne-out.png)
 
 
 
