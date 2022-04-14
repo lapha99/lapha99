@@ -1,4 +1,9 @@
 #  Données transcriptomiques  
+<p align='center'>
+<img align="center" width=50% src=https://th.bing.com/th/id/OIP.XpvrkuzBL7ck9jTEUz96_gHaDt?pid=ImgDet&rs=1/>
+</p>
+
+
 ## Analyse Exploiratoire des données :
 *  Défintion
 *  Détection des valeurs  aberrant
