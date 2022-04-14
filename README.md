@@ -110,5 +110,12 @@ Nous utilisons une activation "RELU",et pour la formation de notre modèle nous 
 Dans l'ensembe, nous sélectionnons Batch-size=50,learningRate=0.001 et pour les époques  grâce à Callbacks on a importé Earlystopping qui nous permet d'arrêter l'entraînement avant de passer à l'overfeating et ainsi il nous donne la bonne epoque qui est 100.
 La perte d'entraînement et de validation sur 100 époques d'entraînement pour le modèle optimal est illustrées ci-dessous.
 
+![Autoencoder_vis](https://github.com/lapha99/Projet-stage/blob/main/figure/AE_visualisation.png?raw=true)
+
+En tant que modèle génératif(création de nouvelles entrées), les entités à dimension reduite peuvent être simuler pour échantilloner des données.
+Vous trouverez ci-dessous une visualisation de t-SNE des caracteristiques codées de l'encodeurs.
+
+![Visualisation t-SNE output](
+
 
 
