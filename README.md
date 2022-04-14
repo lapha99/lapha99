@@ -21,9 +21,8 @@ Vous trouverez ci-dessous  une  visualisation de boxplot aprés suppressions des
 
 ![boxplot suppression ](https://github.com/lapha99/Projet-stage/blob/main/figure/box.png)
 
-# Analyses des  composantes principale (ACP) :  
+# Analyses des  composantes principales : 
 
-Nous Présentons un ACP appliquées aux données.Un  ### ACP  est une méthode de réduction de dimension qui va permettre  de transformer  des variables trés corrélées en nouvélles variables  décorellées les unes des autres.L'idée  c'est de resumer  l'information qui est contenu dans une  large  base de données en un certain variables synthétiques : composantes principales.               
-Passons  à la visualisation de nos données en appliquant (ACP)
+Nous  présentons un ACP sur les données transcriptomique.Un ACP  est une méthode de reduction de  dimension  qui va permettre de transformer des variables trés corrélées en nouvelles variables  décorrélées les unes des autres. Le principe est simple  il s'agit enfaite  de resumer l'information  qui est contenu dans une large base de données  en un certain nombre de variables synthétiques appelés : composantes principales.
 
-![ACP ](
+![ACP ]( https://github.com/lapha99/Projet-stage/blob/main/figure/ACP__Suppr.png)
