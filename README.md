@@ -1,7 +1,7 @@
 #  Données transcriptomiques  
 ## Analyse Exploiratoire des données :
 *  Défintion
-*  Détectio des valeurs  aberrant
+*  Détection des valeurs  aberrant
 *  Suppréssions et normalisation
  # Définition : 
   
