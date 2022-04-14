@@ -104,3 +104,11 @@ Nous selectionnons les 8000 gènes les plus exprimés de maniére variable par e
 ## 8000--->4000--->2000--->1000--->500--->250-->100.
 Nous utilisons une activation "RELU",et pour la formation de notre modèle nous utilisons  la bibliothéque Keras.
 
+![Architecture](https://github.com/lapha99/Projet-stage/blob/main/figure/auto_encoder.png)
+
+# Hyperparamétrisation
+Dans l'ensembe, nous sélectionnons Batch-size=50,learningRate=0.001 et pour les époques  grâce à Callbacks on a importé Earlystopping qui nous permet d'arrêter l'entraînement avant de passer à l'overfeating et ainsi il nous donne la bonne epoque qui est 100.
+La perte d'entraînement et de validation sur 100 époques d'entraînement pour le modèle optimal est illustrées ci-dessous.
+
+
+
