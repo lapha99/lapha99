@@ -90,4 +90,17 @@ X_tsne=tsne.fit_transform(Xnorm)
 ```
 
 ## Visualisation t-SNE:
-![
+
+![Visualisation t-SNE](https://github.com/lapha99/Projet-stage/blob/main/figure/Tsne-final.png)
+
+# Model Autoencoder:
+
+Les auto encodeurs sont des reseaux de neurones qui possédent exactement le *même nombre de neurones sur leur couche d'entrée et leur couche de sortie*.
+Le but pour un auto encodeur est d'avoir une sortie la plus proche de l'entrée! L'apprentissage est donc << auto-supervisé >> car la perte (loss) à minimiser est le coût de reconstruction entre la sortie et l'entrée.Ce qui fait de ce modèle un modèle non supervisé.
+
+## Architecture de notre modèle:
+
+Nous selectionnons les 8000 gènes les plus exprimés de maniére variable par ecart absolue médiane (MAD).Nous compréssons ce vecteurs d'expression génique 8000(pour tous les échantillons) en ajoutants des couches de la sorte:
+## 8000--->4000--->2000--->1000--->500--->250-->100.
+Nous utilisons une activation "RELU",et pour la formation de notre modèle nous utilisons  la bibliothéque Keras.
+
