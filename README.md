@@ -62,12 +62,13 @@ Vous trouverez ci-dessous  une  visualisation de boxplot aprés suppressions des
 ![boxplot suppression ](https://github.com/lapha99/Projet-stage/blob/main/figure/box.png)
 
 Remarque:
-Aprés suppréssions des valeurs aberrantes la dimension de nos données est passée de (58717,27) à (16030,27).
+Aprés suppréssions des valeurs aberrantes la dimension de nos données est passée de (58717,27) à (15601,27).
 
 # Normalisation des données:
 Les données d'expression brutes sont normalisées selon la méthode CPM. Des unités d'expression normalisées sont nécessaires pour éliminer les biais techniques dans les données sequencées telles que la profondeur du sequençage et la longueure des gènes et rendre les expressions des gènesdirectement comparables au sein et entre les échantillons.La normalisation CPM (Nombcre par million de lectures mappées) ne tient pas en compte de la longueur de la transcription,convient  aux protocoles de sequençage ou les lectures sont générés quelques soit la longueur du gène.
 
-Note: Normalisation CPM est installer à l'aide du package python *bioinfokit*
+Note: Normalisation CPM est installer à l'aide du package python *bioinfokit*.
+
 
 # Analyses des  composantes principales : 
 
