@@ -69,6 +69,7 @@ Les données d'expression brutes sont normalisées selon la méthode CPM. Des un
 
 Note: Normalisation CPM est installer à l'aide du package python *bioinfokit*.
 
+![box_normalisée](https://github.com/lapha99/lapha99/blob/main/box_norm.png)
 
 # Analyses des  composantes principales : 
 
