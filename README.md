@@ -116,7 +116,8 @@ Nous utilisons une activation "RELU",et pour la formation de notre modèle nous 
 
 #  Hyperparamétrisation optimaux :
 
-Afin de sélectionner les paramétres les plus omptimaux pour le modèle, nous avons éffectuer une recherche de paramétres par la méthode << RandomSearchCV >> en choisissant { LatentDim:[50,70,..90,..200],hidden_dim: [100,300], epochs: [50,100,200], batch_size: [8,16,32], learning_rate: [0.0001,0.001,0.01] } et un callback earlystopping pour selectionner les meilleurs parametres trés tôt avant de passer à un Overfeating.
+Afin de sélectionner les paramétres les plus omptimaux pour le modèle, nous avons éffectuer une recherche de paramétres par la méthode 
+<< RandomSearchCV >> en choisissant { LatentDim:[50,70,..90,..200],hidden_dim: [100,300], epochs: [50,100,200], batch_size: [8,16,32], learning_rate: [0.0001,0.001,0.01] } et un callback earlystopping pour selectionner les meilleurs parametres trés tôt avant de passer à un Overfeating.
 Dans l'ensemble, nous avons trouvé comme meilleurs paramétres: { learning_rate: 0.0001, latent_dim: 90,hidden_dim:300, epochs:50 et batch_size: 16}
 
 La perte d'entraînement et de validation sur 50 époques d'entraînement pour le modèle optimal est illustrées ci-dessous.
