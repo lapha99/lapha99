@@ -114,9 +114,12 @@ Nous utilisons une activation "RELU",et pour la formation de notre modèle nous 
 
 ![Architecture](https://github.com/lapha99/Projet-stage/blob/main/figure/auto_encoder.png)
 
-# Hyperparamétrisation
-Dans l'ensembe, nous sélectionnons batch Size = 50, learningRate = 0.001 et pour les époques  grâce à Callbacks on a importé Earlystopping qui nous permet d'arrêter l'entraînement avant de passer à l'overfeating et ainsi il nous donne la bonne epoque qui est 100.
-La perte d'entraînement et de validation sur 100 époques d'entraînement pour le modèle optimal est illustrées ci-dessous.
+#  Hyperparamétrisation optimaux :
+
+Afin de sélectionner les paramétres les plus omptimaux pour le modèle, nous avons éffectuer une recherche de paramétres par la méthode << RandomSearchCV >> en choisissant { LatentDim:[50,70,..90,..200],hidden_dim: [100,300], epochs: [50,100,200], batch_size: [8,16,32], learning_rate: [0.0001,0.001,0.01] } et un callback earlystopping pour selectionner les meilleurs parametres trés tôt avant de passer à un Overfeating.
+Dans l'ensemble, nous avons trouvé comme meilleurs paramétres: { learning_rate: 0.0001, latent_dim: 90,hidden_dim:300, epochs:50 et batch_size: 16}
+
+La perte d'entraînement et de validation sur 50 époques d'entraînement pour le modèle optimal est illustrées ci-dessous.
 
 ![Autoencoder_vis](https://github.com/lapha99/Projet-stage/blob/main/figure/AE_visualisation.png?raw=true)
 
