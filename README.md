@@ -132,6 +132,6 @@ Vous trouverez ci-dessous une visualisation de t-SNE des caracteristiques codée
 ## Visualisation Heatmap:
 
 
-![heatmap_encoder](
+![heatmap_encoder](https://github.com/lapha99/lapha99/blob/main/heatmap.png)
 
 
